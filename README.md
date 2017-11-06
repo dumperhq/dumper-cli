@@ -4,7 +4,7 @@ CLI tools to run on servers and check if the server configuration is ready for [
 
 ## Installation
 
-Install the CLI:
+On your server, install the CLI:
 
 ```sh
 $ gem install dumper-cli
@@ -16,7 +16,7 @@ And then execute:
 $ dumper doctor
 ```
 
-and it will report if there's anything to be fixed.
+Then it will report if there's anything that needs to be fixed.
 
 ```
 Checking IP address... 192.168.1.2 => Private IP, warning - remote fetch from dumper.io to this server will fail. You will need to use the dumper gem with rails.
