@@ -1,35 +1,25 @@
-# Dumper::Cli
+# Dumper CLI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dumper/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+CLI tools to run on servers and check if the server configuration is ready for [Dumper](https://dumper.io).
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install the CLI:
 
-```ruby
-gem 'dumper-cli'
+```sh
+$ gem install dumper-cli
 ```
 
 And then execute:
 
-    $ bundle
+```sh
+$ dumper doctor
+```
 
-Or install it yourself as:
+and it will report if there's anything to be fixed.
 
-    $ gem install dumper-cli
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dumper-cli.
+```
+Checking IP address... 192.168.1.2 => Private IP, warning - remote fetch from dumper.io to this server will fail. You will need to use the dumper gem with rails.
+Checking my.cnf... No bind-address defined in my.cnf => good
+Checking server clock accuracy... 2017-11-06 17:39:59 (server time) vs 2017-11-06 17:39:59 (ntp time), diff: 0.009 seconds => good
+```
